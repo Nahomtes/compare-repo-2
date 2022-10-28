@@ -1,4 +1,8 @@
-import { faBook, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import {
+  // faQuestionCircle,
+  faBook,
+  faEnvelope,
+} from '@fortawesome/free-solid-svg-icons';
 import {
   faDiscourse,
   faTwitterSquare,
@@ -10,6 +14,11 @@ import config from './config';
 
 export const externalLinks = {
   about: [
+    // {
+    //   label: `Platform version ${process.env.REACT_APP_REVISION ?? 'dev'}`,
+    //   url: `https://github.com/opentargets/platform-app/releases/tag/${process
+    //     .env.REACT_APP_REVISION ?? 'v0.1.1'}`,
+    // },
     {
       label: 'Community forum',
       url: 'https://community.opentargets.org',
@@ -60,6 +69,7 @@ export const externalLinks = {
     },
   ],
   social: [
+    // { icon: faDiscourse, url: 'https://community.opentargets.org' },
     { icon: faTwitterSquare, url: 'https://twitter.com/opentargets' },
     { icon: faLinkedin, url: 'https://www.linkedin.com/company/open-targets' },
     { icon: faYoutubeSquare, url: 'https://www.youtube.com/opentargets' },
@@ -74,6 +84,18 @@ export const mainMenuItems = config.profile.mainMenuItems ?? [
     name: 'Documentation',
     url: 'https://platform-docs.opentargets.org/getting-started',
     external: true,
+  },
+  // RMTL Doc
+  {
+    name: 'FDA PMTL Documentation',
+    url: '/mtp-pmtl-docs',
+    external: false,
+  },
+  // FDA RMTL
+  {
+    name: 'FDA PMTL',
+    url: '/fda-pmtl',
+    external: false,
   },
   // Downloads
   {
@@ -213,10 +235,10 @@ export const particlesConfig = {
 };
 
 // App title.
-export const appTitle = 'Open Targets Platform';
+export const appTitle = 'Molecular Targets Platform';
 export const appDescription =
-  'The Open Targets Platform is a data integration tool that supports systematic drug target identification and prioritisation';
-export const appCanonicalUrl = 'https://platform.opentargets.org';
+  'The Molecular Targets Platform is a data integration tool that supports systematic drug target identification and prioritisation';
+export const appCanonicalUrl = 'https://moleculartargets.ccdi.cancer.gov';
 
 // Chunk sizes for server side pagination/download.
 export const tableChunkSize = 100;
@@ -282,4 +304,30 @@ export const studySourceMap = {
   GCST: 'GWAS Catalog',
   SAIGE: 'UK Biobank',
   NEALE: 'UK Biobank',
+};
+
+export const contact = {
+  email: 'ncichildhoodcancerdatainitiative@mail.nih.gov',
+};
+
+export const version = {
+  frontend: config.frontendVersion,
+  frontendURL: 'https://github.com/CBIIT/ppdc-otp-frontend/releases',
+  backend: config.backendVersion,
+  backendURL: 'https://github.com/CBIIT/ppdc-otp-backend/releases',
+  changeLogPage: '/change-log',
+  fdaPmtlData: '3.0',
+};
+
+export const mtpPageNames = {
+  // FDA Pediatric Molecular Target Lists
+  fdaPmtlPage: {
+    label: 'FDA Pediatric Molecular Target Lists',
+    url: '/fda-pmtl',
+  },
+  // MTP PMTL Documentation 
+  mtpPmtlDocPage: {
+    label: 'MTP PMTL Documentation',
+    url: '/mtp-pmtl-docs',
+  },
 };

@@ -6,7 +6,7 @@ var configProfile = {
   // config navbar main menu (hamburger)
   // mainMenuItems: [],
   // homepage logo subtitle (tagline)
-  otLogoTagline: 'Beta',
+  otLogoTagline: 'Partner Preview',
 
   /* colors */
 
